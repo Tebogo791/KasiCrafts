@@ -54,7 +54,7 @@ ________________________________________________________________________________
 - Automated Testing (CI/CD): Implemented GitHub Actions to automatically build the project and run JUnit unit tests on every push to the main branch. This ensures the code compiles successfully on clean environments, not just the developer's local machine.
 - Workflow File: See .github/workflows/build.yml for the automated build and test pipeline configuration.
 
-  Github link:https://github.com/Tebogo791/KasiCrafts
+  Github link:[https://github.com/Tebogo791/KasiCrafts]
 
 ________________________________________________________________________________
 
@@ -62,7 +62,7 @@ ________________________________________________________________________________
 
 A comprehensive video presentation showcasing all the app's features, including the REST API connection, local authentication, and cloud database synchronization, has been recorded.
 
-[] 
+youTube Link:[https://youtu.be/OWqQ7na4WzA?si=lSZgIle-5jIWdE5X] 
 
 
 ________________________________________________________________________________
