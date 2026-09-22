@@ -76,7 +76,7 @@ ________________________________________________________________________________
 7. INSTALLATION & SETUP
 
 1. Clone the repository:
-   git clone https://github.com/YourUsername/KasiCrafts.git
+   https://github.com/Tebogo791/KasiCraft
 2. Open the project in Android Studio.
 3. Allow Gradle to sync and download all dependencies (Retrofit, Glide, Firebase, Navigation).
 4. Run the app on an emulator or physical device (Minimum SDK: API 24).
