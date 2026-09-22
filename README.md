@@ -54,6 +54,8 @@ ________________________________________________________________________________
 - Automated Testing (CI/CD): Implemented GitHub Actions to automatically build the project and run JUnit unit tests on every push to the main branch. This ensures the code compiles successfully on clean environments, not just the developer's local machine.
 - Workflow File: See .github/workflows/build.yml for the automated build and test pipeline configuration.
 
+  Github link:https://github.com/Tebogo791/KasiCrafts
+
 ________________________________________________________________________________
 
 5. VIDEO DEMONSTRATION
@@ -76,7 +78,7 @@ ________________________________________________________________________________
 7. INSTALLATION & SETUP
 
 1. Clone the repository:
-   https://github.com/Tebogo791/KasiCraft
+  https://github.com/Tebogo791/KasiCrafts
 2. Open the project in Android Studio.
 3. Allow Gradle to sync and download all dependencies (Retrofit, Glide, Firebase, Navigation).
 4. Run the app on an emulator or physical device (Minimum SDK: API 24).
