@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#0A0A0C">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/loginFormContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_card"
+            android:elevation="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="28dp"
+            android:paddingVertical="36dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="420dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/kasi_crafts_logo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/kasi_crafts_banner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:letterSpacing="0.02"
+                android:text="@string/welcome_back"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:text="@string/sign_in_subtitle"
+                android:textColor="#A0A0AB"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:hint="@string/hint_email"
+                app:boxBackgroundColor="#16161A"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#FF6D00"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2.5dp"
+                app:hintTextColor="#FF6D00"
+                app:startIconDrawable="@android:drawable/ic_dialog_email"
+                app:startIconTint="#A0A0AB">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:paddingVertical="16dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:hint="@string/hint_password"
+                app:boxBackgroundColor="#16161A"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#FF6D00"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2.5dp"
+                app:hintTextColor="#FF6D00"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#A0A0AB"
+                app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                app:startIconTint="#A0A0AB">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:paddingVertical="16dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#FF6D00"
+                android:stateListAnimator="@null"
+                android:text="@string/btn_sign_in"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:rippleColor="#40FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/register_prompt"
+                android:textColor="#FF6D00"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

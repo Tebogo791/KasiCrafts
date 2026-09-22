@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.example.myapplication.DiscoverFragment"
+        android:label="Discover" />
+
+    <fragment
+        android:id="@+id/sellFragment"
+        android:name="com.example.myapplication.SellFragment"
+        android:label="Sell" />
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.myapplication.CartFragment"
+        android:label="Cart" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.myapplication.SettingsFragment"
+        android:label="Profile" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplication.ProfileFragment"
+        android:label="ProfileLegacy" />
+
+</navigation>

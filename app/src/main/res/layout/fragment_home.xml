@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0C"
+    android:padding="20dp">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore Crafts"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:letterSpacing="0.01"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Authentic African Culture"
+                android:textSize="13sp"
+                android:textColor="#A0A0AB"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/kasi_crafts_banner"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircleImageView"/>
+    </RelativeLayout>
+
+    <!-- Search Input Layout -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for unique crafts..."
+        app:hintTextColor="#A0A0AB"
+        app:boxStrokeColor="#FF6D00"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="1.5dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxBackgroundColor="#16161A"
+        app:startIconDrawable="@android:drawable/ic_menu_search"
+        app:startIconTint="#A0A0AB"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:paddingVertical="14dp"
+            android:maxLines="1"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Categories horizontal filter -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="20dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:chipSpacingHorizontal="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Items"
+                style="@style/Widget.Material3.Chip.Filter"
+                app:chipCornerRadius="12dp"
+                app:chipBackgroundColor="#FF6D00"
+                android:textColor="#FFFFFF"
+                app:chipStrokeWidth="0dp"
+                android:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baskets"
+                style="@style/Widget.Material3.Chip.Filter"
+                app:chipCornerRadius="12dp"
+                app:chipBackgroundColor="#16161A"
+                android:textColor="#A0A0AB"
+                app:chipStrokeWidth="0dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pottery"
+                style="@style/Widget.Material3.Chip.Filter"
+                app:chipCornerRadius="12dp"
+                app:chipBackgroundColor="#16161A"
+                android:textColor="#A0A0AB"
+                app:chipStrokeWidth="0dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jewelry"
+                style="@style/Widget.Material3.Chip.Filter"
+                app:chipCornerRadius="12dp"
+                app:chipBackgroundColor="#16161A"
+                android:textColor="#A0A0AB"
+                app:chipStrokeWidth="0dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Textiles"
+                style="@style/Widget.Material3.Chip.Filter"
+                app:chipCornerRadius="12dp"
+                app:chipBackgroundColor="#16161A"
+                android:textColor="#A0A0AB"
+                app:chipStrokeWidth="0dp"/>
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="#FF6D00"/>
+
+</LinearLayout>

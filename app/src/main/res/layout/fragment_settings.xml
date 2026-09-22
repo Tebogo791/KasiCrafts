@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Profile Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Circular placeholder with initials TP -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAvatarContainer"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="40dp"
+                app:cardBackgroundColor="#D84315"
+                app:cardElevation="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvProfileInitials"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="TP"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivProfileAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        android:contentDescription="Avatar" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Thabo Petersen"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Bronze Member badge -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#332211"
+                app:cardElevation="0dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="Bronze Member"
+                    android:textColor="#CD7F32"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Loyalty Progress Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#1E1E1E"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loyalty Progress"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <ProgressBar
+                    android:id="@+id/pbLoyalty"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="45"
+                    android:progressTint="#D84315"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="450 / 1000 points to Silver Member"
+                    android:textColor="#888888"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Toggle Switches Preferences Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#1E1E1E"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Switch
+                    android:id="@+id/switchNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingHorizontal="8dp"
+                    android:text="Push notifications"
+                    android:textColor="#FFFFFF"
+                    android:thumbTint="#D84315"
+                    android:trackTint="#88D84315"/>
+
+                <Switch
+                    android:id="@+id/switchNearMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingHorizontal="8dp"
+                    android:text="Near me alerts"
+                    android:textColor="#FFFFFF"
+                    android:thumbTint="#D84315"
+                    android:trackTint="#88D84315"/>
+
+                <Switch
+                    android:id="@+id/switchOfflineMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingHorizontal="8dp"
+                    android:text="Offline mode"
+                    android:textColor="#FFFFFF"
+                    android:thumbTint="#D84315"
+                    android:trackTint="#88D84315"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Clickable Account Options Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#1E1E1E"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Option: Edit Profile -->
+                <LinearLayout
+                    android:id="@+id/llEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Edit Profile"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Go"/>
+                </LinearLayout>
+
+                <!-- Option: Change Password -->
+                <LinearLayout
+                    android:id="@+id/llChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Change Password"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Go"/>
+                </LinearLayout>
+
+                <!-- Option: Payment Methods -->
+                <LinearLayout
+                    android:id="@+id/llPaymentMethods"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment Methods"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Go"/>
+                </LinearLayout>
+
+                <!-- Option: Delivery Addresses -->
+                <LinearLayout
+                    android:id="@+id/llDeliveryAddresses"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delivery Addresses"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Go"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Save Button to update matching logic -->
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Profile Preferences"
+            android:backgroundTint="#D84315"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Sign Out Button -->
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:backgroundTint="#2C2C2C"
+            android:textColor="#FF4444"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>
